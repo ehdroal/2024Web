@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>div 블록속성을 인라인화</title>
+	<style>
+		*{font-family:'나눔고딕', '돋움'; font-size:14px; color:#fff;}
+		
+		.txt1{background-color:rgb(81, 14, 14);}
+		.txt2{background-color:red;}
+		.txt3{background-color:orange;}
+		
+		#div1 div{display:inline; width:300px; height:80px;} /* 인라인 속성의 경우 가로/세로값 지정 할 수 없다. */
+		
+		#div2 div{display:inline-block; width:300px; height:80px; text-align: center; line-height: 80px;} /* 인라인 블록 속성의 경우 가로/세로값 지정 가능 */	
+		a{display: block; width:300px; height:80px; text-decoration: none;}	
+		a:hover	{text-decoration: underline; background-color: blueviolet;}	
+	</style>
+</head>
+<body>
+	<div id="div1">
+		<div class="txt1">원숭이 엉덩이는 빨개</div>
+		<div class="txt2">빨가면 사과</div>
+		<div class="txt3">사과는 맛있어</div>
+	</div>
+	<br>
+	<div id="div2">
+		<div class="txt1"> <a href="https://www.naver.com/" target="_blank" rel="noopener noreferrer"> 원숭이 엉덩이는 빨개</a></div>
+		<div class="txt2">빨가면 사과</div>
+		<div class="txt3">사과는 맛있어</div>
+	</div>	
+</body>
+</html>

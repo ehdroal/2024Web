@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>블록과 인라인</title>
+	<style>
+		body{padding:0; margin:0;}
+
+		div{background-color:green;}
+		
+		span{background-color:skyblue; width:200px; height:100px; display:inline-block;}
+	
+		a{background-color:red; width:200px; height:100px; display:inline-block;}
+		<!--span이나 a태그처럼 인라인속성은 가로세로 사이즈를 지정할 수 없으나 display:inline-block;을 통해 가능하게 됨 -->
+				
+		h4{border:1px solide red;}
+		p, h3{background:yellow;}
+
+		.divs{background-color:green; width:600px; height:200px;}
+		
+
+	</style>
+</head>
+
+<body>
+	<div>div태그는 블록요소입니다.</div>
+	
+	<span>span은 인라인요소 입니다..</span>
+	<a href="#">a태그는 인라인요소 에요.</a>
+	<span>span은 인라인요소 입니다..</span>
+	
+	<p>p태그는 블록요소이며 기본적으로 위아래 여백을 가집니다.</p>
+	
+	<h4>h태그는 블록요소이며 기본적으로 위아래 여백을 가집니다.</h4>
+
+	<div class="divs">
+		<p>div와 p태그는 블록요소이며 블록요소안에 블로요소를 넣어 활용 가능합니다.</p>
+		<h3>div와 h태그는 블록요소이며 블록요소안에 블록요소를 넣어 활용 가능합니다.</h3>
+	</div>
+
+</body>
+</html>

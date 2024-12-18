@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관련 뉴스 페이지</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        h1 {
+            color: rgb(245, 225, 10);
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        #news h2 {
+            color: #333;
+            margin: 15px 0;
+        }
+        #news a {
+            color: rgb(245, 225, 10);
+            text-decoration: none;
+        }
+        #news a:hover {
+            text-decoration: underline;
+        }
+        #news p {
+            color: #555;
+            line-height: 1.6;
+        }
+        button {
+            background-color: rgb(245, 225, 10);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: rgb(245, 225, 10);
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ededec;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>관련 뉴스</h1>
+    <p>최신 기사와 관련된 뉴스를 확인하세요.</p>
+    <div id="news"></div>
+    <button id="loadButton" onclick="loadNews()">뉴스 불러오기</button>
+    <script>
+        function loadNews() {
+            const newsData = [
+                { title: "[뉴스추적] 한우·계란 등장에 당근마켓 소란까지…국감스타 사라진 이유는", content: "더불어민주당 윤종군 의원이 국토부 장관에게 '지금 장관 차량이 당근마켓에 5천만 원에 올라와있다 알고 있느냐'는 질의를 하는데요.", link: "https://www.mbn.co.kr/news/politics/5062309" },
+                
+                { title: "핫도그·계란말이 사러 오픈런, 그런데 대기고객 500명”…대체 뭐길래", content: "더현대서울에서 미국 핫도그 '더트 도그'와 일본 계란말이 '마루타케' 팝업스토어가 22일부터 28일까지 큰 인기로 열립니다..", link: "https://www.mk.co.kr/news/economy/11075821" },
+                { title: "치즈계란말이 좋은 이유... 달걀 궁합식품 3", content: "세계 최고령자 할머니가 자신의 장수 비결로 정기적인 달걀(계란) 섭취를 꼽으면서 달걀에 대한 영양학적인 우수성이 널리 알려진 바 있다", link: "https://kormedi.com/1391349/" },
+                { title: "계란 한판 다 쓴 초대형 계란말이 벽돌 크기 실화냐?", content: "지난 4월 14일 방송된 KBS 2TV 'VJ 특공대'는 대구의 한 포장마차에 판매 중인 계란말이를 소개했다. 다른 음식점 계란말이와 다른 점은 압도적인 크기다.", link: "https://www.chosun.com/site/data/html_dir/2017/08/24/2017082401684.html" },
+                { title: "착 붙는 일본어 회화 : 한국의 계란말이는 안 다네요.", content: "그러고 보니 한국의 계란말이는 안 다네요.", link: "https://www.hankyung.com/article/202103237931Q" },
+                { title: "대부분 계란말이·계란찜 한정… 메뉴 다양성 절실", content: "연구자 엄애선 교수  한양대학교 식품영양학과 \
+                이번 연구는 단체급식 분야에 종사하는 영양사를 대상으로 단체급식에서 계란요리의 불편한 점을 찾아 개선하고 계란요리를 확대할 수 있는 방안을 찾기 위해 실시했다.", link: "https://www.fsnews.co.kr/news/articleView.html?idxno=25967" },
+                { title: "계란말이 김밥에 전복·흑돼지...서귀포에선 가능합니다", content: "편의점 도시락으로 끼니를 때우려다 우연히 발견했다. 전복김밥을, 그것도 계란에 말아서 만든다고?", link: "https://www.ytn.co.kr/_ln/0126_202005292030356595" },
+            ];
+            
+            let newsHtml = "";
+            newsData.forEach(news => {
+                newsHtml += `<h2><a href="${news.link}" target="_blank">${news.title}</a></h2><p>${news.content}</p>`;
+            });
+            
+            document.getElementById("news").innerHTML = newsHtml;
+            document.getElementById("loadButton").style.display = 'none';
+        }
+    </script>
+    <footer>
+        <p>
+            © 2024 계란말이 레시피. 여러분의 부엌에 기쁨을 더합니다. 모든 권리는 보호됩니다.
+        </p>
+        <p>
+            문의 사항이 있으시다면 <a href="qwer@m.jeiu.ac.kr">qwer@m.jeiu.ac.kr</a>으로 연락해 주세요.
+        </p>
+    </footer>
+</body>
+</html>

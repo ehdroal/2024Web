@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>div태그 span태그</title>
+	<style type="text/css"> 
+	 div, span{border:1px solid red;}
+	 
+	 .ly1{display:inline; width:200px; background:#0CF}/*블록성질을 인라인으로, 가로값을 넣었지만 적용되지 않음.*/
+	 .ly2{width:300px; background:#FC3; float: left;}/*위로띄워 맨왼쪽으로 정렬되면서 블록 성질이 없어짐. 가로값 지정시 표현됨.*/
+	 
+	 .dis1{display:block; width:700px; background:#0CF}/*인라인성질을 블록으로,가로세로값 지정 가능.*/
+	 .text{
+		display: inline-block;
+		width: 500px;
+	 } 
+	</style>
+</head>
+<body>
+	<h3>div</h3><!--hn태그는 블록성질, 위아래 여백을 가짐 -->
+    <div class="ly1">AAAAAA</div><!--div 블록을 인라인 방식으로, 가로 사이 4픽셀정도 간격 생김 -->
+    <div class="ly1">BBBBBB</div><!--div 블록을 인라인 방식으로, 가로 사이 4픽셀정도 간격 생김 -->
+    <div class="ly2">CCCCCC</div><!--float:left를 적용하니 위로 띄워 상단 맨왼쪽으로 이동, 한줄차지하는 블록 성질이 없어짐. -->
+	<br><br>
+	<div>DDDDDD</div>
+    <div>EEEEEE</div><br><br>
+    
+	<h3>span</h3><!--hn태그는 블록성질, 위아래 여백을 가짐 -->
+    <span class="dis1">EEEEE</span><!--span 인라인을 블록방식으로 -->
+    <span>FFFFF</span>
+    <span>GGGGG</span>
+    <span>HHHHH</span><br><br><br><br>
+
+<!-- display:block;텍스트 속성인 인라인 요소에 블럭요소(width-height-margin,padding)등을 주고 싶을 때
+    많이 쓰입니다. 예를 들어 a태그(인라인속성)에 링크 영역을 설정하고 싶을때.
+    기본 블럭의 막는 성질을 없애고 정렬하고 싶을 때 등등 쓰임이 많은 유용한 요소입니다. -->
+	
+	<h3>img</h3>
+	<img src="img/513331.jpg" width="250px" height="300px">
+	<img src="img/513331.jpg" width="250px" height="300px"> img는 인라인블록 성질이라 옆으로 붙으면서 사이즈 조정가능
+	<!-- img는 인라인 성질이라 옆으로 붙음, 가로세로 사이즈 적용가능 -->
+	<br><br><br><br>
+	
+	<img src="img/513331.jpg" width="250px" height="300px">
+	<div class="text">
+		<h3>블랑슈 그레이 극세사 차렵이불</h3>
+		<p>가성비 쵝오! 가볍고 따뜻하며 보들보들합니다 감사합니다. 좋은제품 많이 많이 파세요.</p>
+	</div>
+	<!-- h3와 p태그는 블록성질이라 당연히 위아래로 사진과 글이 배치됨.-->
+    <br><br><br><br><br><br>
+</body>
+</html>

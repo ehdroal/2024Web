@@ -1,0 +1,108 @@
+/* base  - 기본 구조  - 브라우저 초기화 */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+a{text-decoration: none; color: #444; display:block;}
+
+body{width: 100vw; height:100vh; overflow: hidden;}
+
+.wrap {  
+  display: flex;
+  flex-direction: column; 
+  min-height: 100vh;
+}
+  header{ width: 100vw; height:100px; background-color: black;}
+
+    header h3{
+      color: aliceblue;
+      text-align: center;
+      line-height: 10vh;
+      height:10vh; 
+    }
+
+  /*---------- 메뉴쪽---------*/
+  .menu{
+    width:100%; height:60px;
+    background:greenyellow;
+    display: flex; justify-content: center; align-items: center;
+  }
+      .menu ul{display: flex; }
+      a{padding:15px 28px; font-size: 1.2em;}
+      .menu ul li a:hover{
+        font-style:italic;
+        color: chocolate;
+      }
+
+  /*---------- 가운데---------*/
+  main {
+
+    display: flex;
+    flex-direction: row; /* 좌우 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    justify-content: space-between; /* 좌측 텍스트와 우측 이미지 정렬 */
+    background: radial-gradient(rgb(0, 42, 255), rgb(63, 255, 143)); /* 그라디언트 유지 */
+    padding: 0; /* 여백 제거 */
+    box-sizing: border-box;
+    overflow: hidden; /* 불필요한 스크롤 방지 */
+  }
+
+  .text-section {
+    display: flex; /* 내부 요소 가로 배치 */
+    justify-content: space-around; /* 요소 간 간격 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+  }
+  
+  .text-section h1,
+  .text-section h2,
+  .text-section p {
+    writing-mode: vertical-rl; /* 글자를 세로로 정렬 */
+    text-orientation: upright; /* 글자 방향 유지 */
+    margin: 0; /* 마진 제거 */
+    font-weight: normal; /* 글자 굵게 */
+    color: white;
+  }
+  
+  .text-section h1 {
+    font-size: 190px;
+  }
+  
+  .text-section h2 {
+    font-size: 100px;
+    width: 20%;
+  }
+  
+  .text-section p {
+    font-size: 40px;
+    width: 10%;
+  }
+
+  .footer-text {
+    position: absolute; /* 절대 위치 설정 */
+    top: 880px;
+    left: 170px;
+    font-size: 25px; /* 글자 크기 */
+    font-weight: bold; /* 글자 굵기 */
+    color: white; /* 글자 색상 */
+    margin: 0;
+  }
+  
+
+  /* 이미지 섹션 스타일 */
+.image-section {
+  width: 80%; /* 전체 너비의 70% */
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지 */
+}
+
+
+
+
+  footer {width: 100vw; height: 80px;  background-color: #333;  color: #fff;  
+    display: flex; justify-content: center; align-items: center;}
+
+
+
+  

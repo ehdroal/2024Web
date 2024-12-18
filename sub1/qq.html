@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <title> 폼 만들기_설문조사 </title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+       
+       fieldset{
+            width: 600px;
+            margin: auto;
+            border: 1px solid #757575;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px 50px;
+        }
+        
+        
+        input, textarea{
+            padding: 5px;
+            margin: 5px;
+            border: 0.5px solid rgb(255, 225, 0);
+            border-radius: 10px;
+        }
+        select{ width: 150px;}
+
+        label{
+            font-weight: 800;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h2>설문조사</h2>
+        </header>
+
+        <main>
+            <form name="설문" action="">
+                <fieldset>
+                    <label for="">이 &nbsp; 름 : </label>
+                    <input type=“text” size=20>
+
+                    <label for="">이메일 : </label>
+                    <input type=email placeholder=comgild@nate.com required><br>
+
+                    <label for="">1. 당신이 좋아하는 계란말이의 타입은?</label><br>
+                    <input type=checkbox name=hobby1 value=v1> 일반 계란말이 <br>
+                    <input type=checkbox name=hobby2 value=v2> 김치 계란말이 <br>
+                    <input type=checkbox name=hobby3 value=v3> 치즈 계란말이 <br>
+                    <input type=checkbox name=hobby4 value=v4> 야채 계란말이 <br><br>
+                    <input type=checkbox name=hobby4 value=v4> 
+
+                    <label for=""> 기타인 경우 적어주세요!</label><br>
+                    <textarea name="introduction" cols=90 rows=8></textarea><br>
+
+                    <!-- 여러 항목을 복수 선택할 수 있기 때문에 구분을 위해 name 속성값을 다 다르게 만들어야 함 -->
+
+
+                    <label for="">4. 계란말이와 어울리는 술은?</label><br>
+                    <select name="interest" size=6 multiple>
+                        <option value="1" selected>소주</option>
+                        <option value="2">맥주</option>
+                        <option value="3">와인</option>
+                        <option value="4">막걸리</option>
+                        <option value="5">위스키</option>
+                    </select><br><br>
+
+
+                    <input type=submit value="완료" class="btn" > <!-- submit를 만든 이미지로 할때 <input type="image" src="/assets/img/form_and_input/img_btn_submit.png">-->
+                    <input type=reset value="다시" class="btn" > 
+                </fieldset>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
